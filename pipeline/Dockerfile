@@ -5,5 +5,19 @@ COPY entrypoint.sh /entrypoint.sh
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"] 
-
 RUN chmod +x /entrypoint.sh
+
+
+RUN apt-get install -y \
+    build-essential \
+    curl
+
+# Update new packages
+RUN apt-get update
+
+# Get Rust
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+RUN cargo install cargo-generate
