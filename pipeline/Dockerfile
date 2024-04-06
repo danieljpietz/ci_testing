@@ -13,7 +13,8 @@ RUN apt-get update
 
 RUN apt-get install -y \
     build-essential \
-    curl
+    curl \
+    pkg-config
 
 # Get Rust
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
