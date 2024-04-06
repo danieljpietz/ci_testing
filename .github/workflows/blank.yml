@@ -28,7 +28,8 @@ jobs:
 
       - name: Build docker images
         run: |
-            ls pipeline
-            docker build pipeline/Dockerfile -t local  
+            cd pipeline 
+            ls
+            docker build . -t local  
       - name: Run tests
         run: docker run -it local
