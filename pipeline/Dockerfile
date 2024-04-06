@@ -7,9 +7,8 @@ COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"] 
 RUN chmod +x /entrypoint.sh
 
-
 # Update new packages
-RUN apt-get update
+RUN apt-get -qq update
 
 RUN apt-get install -y \
     build-essential \
