@@ -8,12 +8,12 @@ ENTRYPOINT ["/entrypoint.sh"]
 RUN chmod +x /entrypoint.sh
 
 
+# Update new packages
+RUN apt-get update
+
 RUN apt-get install -y \
     build-essential \
     curl
-
-# Update new packages
-RUN apt-get update
 
 # Get Rust
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
