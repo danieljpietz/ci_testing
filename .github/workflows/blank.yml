@@ -27,6 +27,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build docker images
-        run: docker build -t local < .pipeline/Dockerfile
+        run: docker build -t local < pipeline/Dockerfile
       - name: Run tests
         run: docker run -it local
