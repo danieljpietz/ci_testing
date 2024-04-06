@@ -22,3 +22,5 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 ENV PATH="/root/.cargo/bin:${PATH}"
 
 RUN apt-get install -y qemu-system
+
+RUN rustup target add thumbv7m-none-eabi

@@ -32,4 +32,4 @@ jobs:
             ls
             docker build . -t local  
       - name: Run tests
-        run: docker run local
+        run: docker run -v ./:/repo local 
