@@ -10,4 +10,4 @@ qemu-system-arm \
   -machine lm3s6965evb \
   -nographic \
   -semihosting-config enable=on,target=native \
-  -kernel target/thumbv7m-none-eabi/debug/examples/hello
+  -kernel target/thumbv7m-none-eabi/debug/ci-testing
