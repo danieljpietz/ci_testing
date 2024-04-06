@@ -21,4 +21,4 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-RUN apt-get install -y install qemu-system
+RUN apt-get install -y qemu-system
